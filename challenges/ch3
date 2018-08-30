@@ -1,0 +1,85 @@
+import turtle
+paint = turtle.Screen()
+paint.setup()
+p = turtle.Turtle()
+p.speed(5)
+p.shapesize(0.01)
+p.right(300)
+for i in range(0,2):
+    for i in range(0,3):
+        p.forward(180)
+        p.right(120)
+    p.color("white")
+p.right(90)
+p.color("green")
+for i in range(0,2):
+    for i in range(0,4):
+        p.forward(120)
+        p.right(90)
+    p.color("white")
+p.color("yellow")
+p.left(180)
+for i in range(0,2):
+    for i in range(0,6):
+        p.forward(120)
+        p.right(60)
+    p.color("white")
+p.color("purple")
+p.left(30)
+for i in range(0,2):
+    for i in range(0,8):
+        p.forward(120)
+        p.left(45)
+    p.color("white")
+h = turtle.Turtle()
+h.shape("turtle")
+h.color("blue")
+o = turtle.Turtle()
+o.color("green")
+o.shape("turtle")
+h.right(270)
+o.left(75)
+s = turtle.Turtle()
+p.shapesize(1)
+s.color("purple")
+s.shape("turtle")
+s.right(70)
+p.color("yellow")
+p.shape("turtle")
+for i in range(25):
+    for i in range(0,3):
+            p.forward(180)
+            p.right(120)
+            p.speed(1000)
+    p.left(14)
+for i in range(0,50):
+    for i in range(0,5):
+            s.forward(90)
+            s.right(90)
+            s.speed(1000)
+    s.left(7)
+for i in range(0,30):
+    for i in range(0,7):
+            h.forward(120)
+            h.right(60)
+            h.speed(1000)
+    h.left(3)
+for i in range(0,25):
+    for i in range(0,9):
+            o.forward(120)
+            o.left(45)
+            o.speed(1000)
+    o.left(3)
+
+
+
+
+smile = turtle.Turtle()
+smile.shapesize(0.01)
+smile.penup()
+smile.right(90)
+smile.forward(135)
+smile.left(90)
+smile.pendown()
+smile.circle(120,45)
+wait = input("yeet")
