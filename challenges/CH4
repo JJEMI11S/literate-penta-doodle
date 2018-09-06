@@ -1,0 +1,69 @@
+import turtle
+wn = turtle.Screen()
+wn.setup(2000,2000,0,0)
+wn.bgcolor("lightgreen")
+def quares(why,no):
+    for i in range(0,no):
+        for i in range(0,4):
+            why.forward(20)
+            why.left(90)
+        why.penup()
+        why.forward(50)
+        why.pendown()
+
+
+def bigger(pls,sz,size):
+    for j in range(1,sz+1):
+        for i in range(0,4):
+            pls.forward(size*j)
+            pls.left(90)
+        pls.forward(-size)
+        pls.right(90)
+        pls.forward(size)
+        pls.left(20)
+
+
+def real(cool,beans):
+    for j in range(1,beans+1):
+        for i in range(0,4):
+            cool.forward(20*j)
+            cool.left(90)
+        cool.penup()
+        cool.forward(-10)
+        cool.right(90)
+        cool.forward(10)
+        cool.left(90)
+        cool.pendown()
+
+
+def draw_poly(see,n,sz):
+    for i in range(n):
+        see.forward(sz)
+        see.left(360/n)
+
+
+def spiral(see, n, sz):
+    for i in range(0,n):
+        see.forward(sz*i)
+        see.left(89)
+    for i in range(0,n):
+        see.forward(sz*i)
+        see.left(90)
+
+
+def stars(see):
+    for i in range(0,5):
+        see.penup()
+        see.forward(350)
+        see.right(144)
+        see.pendown()
+        for i in range(0,5):
+            see.forward(100)
+            see.right(144)
+
+
+pls = turtle.Turtle()
+pls.pensize(2)
+pls.color("blue")
+pls.speed(2)
+#you can choose and experiment here
