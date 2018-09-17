@@ -1,0 +1,44 @@
+print("what day is it(in numbers)")
+days = ['sunday','monday','tuesday','wednesday','thursday','friday','saturday']
+numbers = ['0','1','2','3','4','5','6']
+conv = input("")
+print(days[numbers.index(conv)])
+day = days[numbers.index(conv)]
+sleep = int(input("you went to jail how many sleeps did you stay"))
+slept = str(6%sleep +3)
+print(days[numbers.index(slept)])
+print("a <= b \n a < b \n a < 18 or day != 3")
+print("True \n False \n False \n True")
+
+
+def exam_mark(mark):
+    if mark >= 75:
+        print("A")
+    elif mark >= 70:
+        print("B")
+    elif mark >= 60:
+        print("C")
+    else:
+        print("you know what it doesnt matter you failed")
+
+
+def find_hypot(a, b):
+    hyp = (a**2 + b**2)**0.5
+    return hyp
+
+
+def is_rightangled(a, b, c):
+    wine = c
+    leaf = b
+    tree = a
+    if a > b and a > c:
+        wine = a
+        tree = c
+    if b > c and b > a:
+        wine = b
+        leaf = c
+        hyp = (tree**2 + leaf**2)**0.5
+        if hyp == wine :
+            return "is right angled"
+        else:
+            return " isn't right angled"
