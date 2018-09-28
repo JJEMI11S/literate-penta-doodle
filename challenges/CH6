@@ -1,0 +1,97 @@
+directions = ["N", "E", "S", "W"]
+
+
+def turn_clockwise(D):
+    if D in directions:
+        check = directions.index(D)
+        return directions[check + 1]
+    else:
+        return
+
+
+day = ["M", "T", "W", "Th", "F", "Sa", "Su"]
+
+
+def day_name(a):
+    if type(a) == str:
+        if a in day:
+            return day.index(a)+1
+        else:
+            return
+    else:
+        if a >= 1 and a <= 7:
+            return day[a-1]
+        else:
+            return
+
+
+def day_num(a):
+    if a in day:
+        return day.index(a)+1
+
+
+def day_add(a, b):
+    check = day.index(a)
+    cool = (check + b) % 7
+    return day[cool]
+
+
+months = {"J":31, "F":28,"M": 31, "A": 30, "ma": 31, "June": 30, "July": 31, "Au": 31, "S": 30, "O": 31, "N": 30, "D": 31}
+
+
+def days_in_month(a):
+    return months[a]
+
+
+def to_secs(H,M,S):
+    return int((H * 3600) + (M * 60) + (S * 1))
+
+
+def hours_in(a):
+    return int(a/3600)
+
+
+def minutes_in(a):
+    return int((a - int(hours_in(a)*3600))/60)
+
+
+def seconds_in(a):
+    return 9010 - (int((a - int(hours_in(a)*3600))) + hours_in(a)*3600)
+
+
+def compare(a, b):
+    if a > b:
+        return 1
+    if b > a:
+        return -1
+    else:
+        return 0
+
+
+def hypotenuse(a, b):
+    return ((a**2) + (b**2))**0.5
+
+
+def slope(x1, y1, x2, y2):
+    return (y1 - y2)/(x1 - x2)
+
+
+def intercept(x1, y1, x2, y2):
+    m = (y1 - y2)/(x1 - x2)
+    return y1 - (m*x1)
+
+
+def is_even(a):
+    return a % 2 == 0
+
+
+def is_odd(a):
+    return is_even(a) is False
+
+
+def is_factor(f, n):
+    return (n/f) * 1000 == (int(n/f)) * 1000
+
+
+def is_multiple(n, f):
+    return is_factor(f, n)
