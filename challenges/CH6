@@ -95,3 +95,11 @@ def is_factor(f, n):
 
 def is_multiple(n, f):
     return is_factor(f, n)
+
+
+def f2c(x):
+    return round((x-32)*(5/9))
+
+
+def c2f(x):
+    return round(x * (9/5)) + 32
