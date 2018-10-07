@@ -1,0 +1,119 @@
+def q1(list):
+    odd = 0
+    for i in list:
+        if i % 2 == 0:
+            print("YEET")
+        else:
+            odd = odd + 1
+    return odd
+
+
+def q5(list):
+    stop = 1
+    total = 0
+    for i in list:
+        print(i,stop)
+        if i % 2 == 0 and stop == 1:
+            stop = 0
+        else:
+            total = total + i
+    return total
+
+
+def q2(list):
+    total = 0
+    for i in list:
+        if i % 2 == 0:
+            total = total + i
+    return total
+
+
+def q3(list):
+    total = 0
+    for i in list:
+        if i < 0:
+            total = total + i
+    return total
+
+
+def q4(list):
+    count = 0
+    for i in list:
+        if len(i) >= 5:
+            count = count + 1
+    return count
+
+
+def q6(list):
+    return len(list) + 1
+
+
+def q7(number):
+    print("better")
+    return number ** 2
+
+
+def q8():
+    '''
+    i increases and since that is
+    also the value for high the width
+    increases with the value of the number
+    '''
+
+
+def q9(n):
+    for i in range(1, n+1):
+        print(i,"    ",int((i*(i+1))/2))
+    return
+
+def q10(number):
+    count = 0
+    for i in range(number+1):
+        for j in range((number+1)):
+            if i * j == number:
+                count = count + 1
+                print(count)
+    if count == 2:
+        return True
+    else:
+        return False
+
+
+def q11(path):
+    import turtle
+    canvas = turtle.Screen()
+    canvas.setup()
+    why = turtle.Turtle()
+    why.speed(1)
+    for i in range(len(path)):
+        why.right(path[i][0])
+        why.forward(path[i][1])
+
+q12 = [(270,20),(45,14),(90,14),(135,20),(225,28),(135,20),(135,28),(135,20)]
+
+
+
+def q14(number):
+    return(len(list(str(abs(number)))))
+
+
+def q15(number):
+    count = 0
+    x = list(str(abs(number)))
+    for i in x:
+        if int(i) % 2 == 0:
+            count = count + 1
+    return count
+
+
+def q16(xs):
+    total = 0
+    for i in xs:
+        total = total + i**2
+    return total
+
+
+#import turtle
+#wn = turtle.Screen()
+#wn.bgcolor("lightgreen")
+#wn.title("Clock")
