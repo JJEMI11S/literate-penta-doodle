@@ -1,0 +1,38 @@
+byte = [['0','0','1','0','1','0','0','1'],
+        ['0','0','0','1','1','0','1','1'],
+        ['0','1','0','1','1','0','0','1'],
+        ['0','1','0','1','0','1','0','1'],
+        ['1','1','1','1','1','1','1','1'],
+        ['1','1','0','1','1','1','0','1'],
+        ['1','0','1','0','1','0','1','0'],
+        ['1','0','1','0','1','0','1','0'],
+        ['0','0','0','1','0','1','0','0']]
+counter = 0
+counting = 0
+numel = []
+copy = byte
+three = 0
+peggle = []
+for i in byte:
+    counter = 0
+    for j in i:
+        if j == '1':
+            counter = counter + 1
+    if counter % 2 != 0:
+        numel.append(byte)
+        four = i
+for i in range(8):
+    for j in byte:
+        if j[i] == '1':
+            counting += 1
+    if counting % 2 != 0:
+        three = i
+        counting = 0
+        for j in byte:
+            peggle.append(j[three])
+can = byte.index(four)
+four[three] = 'X'
+
+byte[can] = four
+for i in range(len(byte)):
+    print(byte[i])
