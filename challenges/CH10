@@ -1,0 +1,120 @@
+def super_turtle():
+    import turtle
+    screen = turtle.Screen()
+    screen.setup(1000,500)
+    screen.bgcolor("green")
+    melvyn = turtle.Turtle()
+
+
+    def m1():
+        melvyn.forward(10)
+
+
+    def m2():
+        melvyn.left(10)
+
+
+    def m3():
+        melvyn.right(10)
+
+
+    def m4():
+        screen.bye()
+
+
+    def m5():
+        melvyn.right(180)
+
+
+    i = 2
+
+
+    def m6():
+        global i
+        i = i + 2
+        melvyn.pensize(i)
+
+
+    def m7():
+        global i
+        i = i - 2
+        melvyn.pensize(i)
+
+
+    j = 0
+
+
+    def m8():
+        global j
+        colour = ["red","green","blue", "purple"]
+        if j == 3:
+            j = 0
+        else:
+            j = j + 1
+        melvyn.pencolor(colour[j])
+
+
+    screen.onkeypress(m1, "Up")
+    screen.onkeypress(m2, "Left")
+    screen.onkeypress(m3, "Right")
+    screen.onkeypress(m4, "q")
+    screen.onkeypress(m5, "'")
+    screen.onkeypress(m6, "d")
+    screen.onkeypress(m7, "u")
+    screen.onkeypress(m8, "c")
+
+    screen.listen()
+    screen.mainloop()
+
+def traffic():
+    import turtle
+    screen = turtle.Screen()
+    screen.setup(1000, 1000)
+    screen.bgcolor("light green")
+    cone = turtle.Turtle()
+    cone.color("grey")
+    cone.penup()
+    cone.sety(-300)
+    cone.pendown()
+    cone.begin_fill()
+    cone.forward(75)
+    cone.left(90)
+    cone.forward(300)
+    cone.circle(75,180)
+    cone.forward(300)
+    cone.left(90)
+    cone.forward(75)
+    cone.end_fill()
+    treat = ["red", "yellow", "green"]
+    def colours(name):
+        import time
+        name[0].penup()
+        name[0].color(name[1])
+        name[0].pensize(100)
+        name[0].left(270)
+        name[0].forward(100* treat.index(name[1]))
+        name[0].shape("circle")
+
+    red = turtle.Turtle()
+    yellow = turtle.Turtle()
+    green = turtle.Turtle()
+    r = [red, "red"]
+    y = [yellow, "yellow"]
+    g = [green, "green"]
+    colours(r)
+    colours(y)
+    colours(g)
+    for i in range(100):
+        import time
+        green.color("dark green")
+        yellow.color("orange")
+        red.color("dark red")
+        red.color("red")
+        time.sleep(2)
+        red.color("dark red")
+        green.color("green")
+        time.sleep(2)
+        green.color("green")
+        yellow.color("yellow")
+        time.sleep(1)
+
