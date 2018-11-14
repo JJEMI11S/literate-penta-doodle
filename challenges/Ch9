@@ -1,0 +1,10 @@
+def function(t1,t2):
+    print(t1)
+    print(t2)
+
+
+function(('hello',"goodbye"),("hi","bye"))
+
+
+# pair is a kind of tuple
+# i think a pair is a generalisation of a tuple
