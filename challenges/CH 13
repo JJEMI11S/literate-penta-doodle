@@ -1,0 +1,37 @@
+# 1
+myfile = open("text.txt", "w")
+myfile.write("Hopefully this works \n")
+myfile.write("Melvyn is a noob")
+myfile.close()
+
+
+# 2
+
+file_r = open("noobs.txt","r")
+file_w = open("new.txt", "w")
+new = []
+text = file_r.read(100)
+file_w.write(text[::-1])
+
+
+# 3
+
+file_r = open("Snakes","r")
+file_w = open("numbered.txt","w")
+text = file_r.readlines()
+new = []
+for i in range(0, len(text)):
+    new.append(str(i+1))
+    new.append(" ")
+    new.append(text[i])
+print(new)
+file_w.write(''.join(new))
+
+# 4
+
+file_r = open("numbered.txt", "r")
+file_w = open("unnumbered.txt","w")
+text = file_r.readlines()
+for i in text:
+    can = i.split(" ",1)[1]
+    file_w.write(can)
