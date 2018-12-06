@@ -1,0 +1,43 @@
+monsters = open("mosters.txt","r")
+names = []
+check_point = []
+check = 0
+info = monsters.readlines()
+print(info)
+#1
+for i in range(0,len(info)):
+    names.append(info[i].split(",")[1])
+#2
+search = input("please type in the name of the monster you want to find")
+for i in range(0,len(names)):
+    if search.lower() == names[i].lower():
+        print(info[i])
+        check = 1
+if check == 0:
+    print("MONSTER NOT FOUND")
+#3
+can = str(input("have you discovered a new monster (yes or no)"))
+
+if can.lower() == "yes":
+    name = input("please enter the name of the monster")
+    Origin = input("Please enter its origins")
+    Description = input("Please enter a small description of the monster")
+    attack = input("please enter its attack")
+    Magical_Force = input("please enter its Magical Force")
+    Magical_Defence = input("please enter its Magical Defence")
+    Defence = input("please enter its Defence")
+    Intelligence = input("please enter its Intelligence")
+    Health = input("please enter its health")
+    Experience = input("please enter its Experience")
+    check_point.append(len(info)+1)
+    check_point.append(name)
+    check_point.append(Origin)
+    check_point.append(Description)
+    check_point.append(attack)
+    check_point.append(Magical_Force)
+    check_point.append(Magical_Defence)
+    check_point.append(Defence)
+    check_point.append(Intelligence)
+    check_point.append(Health)
+    check_point.append(Experience)
+print(check_point)
